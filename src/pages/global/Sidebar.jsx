@@ -11,13 +11,29 @@ import {
   ReceiptOutlined,
   PersonOutlined,
   CalendarTodayOutlined,
-  HelpOutlinedli,
+  HelpOutlined,
   BarChartOutlined,
   PieChartOutline,
   TimelineOutlined,
   MenuOutlined,
   MapOutlined,
 } from "@mui/icons-material";
+
+const Item = ({ title, to, icon, selected, setSelected }) => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  return (
+    <MenuItem
+      active={selected === title}
+      style={{ color: colors.grey[100] }}
+      onClick={() => setSelected(title)}
+      icon={icon}
+    >
+      <Typography>{title}</Typography>
+      <Link />
+    </MenuItem>
+  );
+};
 
 const Sidebar = () => {
   const theme = useTheme();
@@ -88,15 +104,96 @@ const Sidebar = () => {
                   color={colors.grey[100]}
                   fontWeight="bold"
                   sx={{
-                    m:"10px 0 0 0"
+                    m: "10px 0 0 0",
                   }}
                 >
-                  Hari Sharan Chaulagain
+                  Hari Sharan
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>Super Admin</Typography>
+                <Typography variant="h5" color={colors.greenAccent[500]}>
+                  Super Admin
+                </Typography>
               </Box>
             </Box>
           )}
+          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+            <Item
+            title="Dashboard"
+            to="/"
+            icon={<HomeOutlined/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+            <Item
+            title="Manage Team"
+            to="/team"
+            icon={<PeopleOutlined/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+            <Item
+            title="Contacts Information"
+            to="/contacts"
+            icon={<ContactsOutlined/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+            <Item
+            title="Invoices Balances"
+            to="/invoices"
+            icon={<ReceiptOutlined/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+            <Item
+            title="Profile Form"
+            to="/form"
+            icon={<PersonOutlined/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+            <Item
+            title="Calendar"
+            to="/calendar"
+            icon={<CalendarTodayOutlined/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+            <Item
+            title="FAQ Page"
+            to="/faq"
+            icon={<HelpOutlined/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+            <Item
+            title="Bar Chart"
+            to="/bar"
+            icon={<BarChartOutlined/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+            <Item
+            title="Pie Chart"
+            to="/pie"
+            icon={<PieChartOutline/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+            <Item
+            title="Line Chart"
+            to="/line"
+            icon={<TimelineOutlined/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+            <Item
+            title="Geography Chart"
+            to="/geography"
+            icon={<MapOutlined/>}
+            selected={selected}
+            setSelected={setSelected}
+            />
+          </Box>
         </Menu>
       </ProSidebar>
     </Box>

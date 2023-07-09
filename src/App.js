@@ -3,17 +3,17 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 import Topbar from "./pages/global/Topbar";
 import Sidebar from "./pages/global/Sidebar";
-import Dashboard from "./pages/dashboard";
-import Team from "./pages/team";
-import Invoices from "./pages/invoices";
-import Contacts from "./pages/contacts";
-import Bar from "./pages/bar";
-import Form from "./pages/form";
-import Line from "./pages/line";
-import Pie from "./pages/pie";
-import FAQ from "./pages/faq";
-import Geography from "./pages/geography";
-import Calendar from "./pages/calendar";
+// import Dashboard from "./pages/dashboard";
+// import Team from "./pages/team";
+// import Invoices from "./pages/invoices";
+// import Contacts from "./pages/contacts";
+// import Bar from "./pages/bar";
+// import Form from "./pages/form";
+// import Line from "./pages/line";
+// import Pie from "./pages/pie";
+// import FAQ from "./pages/faq";
+// import Geography from "./pages/geography";
+// import Calendar from "./pages/calendar";
 
 const App = () => {
   const [theme, colorMode] = useMode();
@@ -25,7 +25,7 @@ const App = () => {
           <Sidebar/>
           <main className="content">
             <Topbar />
-            <Routes>
+            {/* <Routes>
               <Route path="/" element={<Dashboard />} />
               <Route path="/team" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
@@ -37,7 +37,7 @@ const App = () => {
               <Route path="/pie" element={<Pie />} />
               <Route path="/geography" element={<Geography />} />
               <Route path="/fqa" element={<FAQ />} />
-            </Routes>
+            </Routes> */}
           </main>
         </div>
       </ThemeProvider>

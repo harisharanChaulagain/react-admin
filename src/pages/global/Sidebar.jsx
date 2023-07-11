@@ -30,7 +30,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       icon={icon}
     >
       <Typography>{title}</Typography>
-      <Link />
+      <Link to={to}/>
     </MenuItem>
   );
 };
@@ -44,6 +44,7 @@ const Sidebar = () => {
   return (
     <Box
       sx={{
+        overflow: "hidden",
         "& .pro-sidebar-inner": {
           background: `${colors.primary[400]} !important`,
         },

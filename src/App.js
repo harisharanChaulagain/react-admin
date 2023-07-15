@@ -11,7 +11,7 @@ import Contacts from "./pages/contacts";
 import Form from "./pages/form";
 // import Line from "./pages/line";
 // import Pie from "./pages/pie";
-// import FAQ from "./pages/faq";
+import FAQ from "./pages/faq";
 // import Geography from "./pages/geography";
 import Calendar from "./pages/calendar";
 
@@ -35,8 +35,8 @@ const App = () => {
              {/* <Route path="/line" element={<Line />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
-              <Route path="/geography" element={<Geography />} />
-              <Route path="/fqa" element={<FAQ />} /> */}
+              <Route path="/geography" element={<Geography />} />*/}
+              <Route path="/faq" element={<FAQ />} /> 
             </Routes>
           </main>
         </div>

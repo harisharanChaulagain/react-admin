@@ -9,7 +9,7 @@ import Invoices from "./pages/invoices";
 import Contacts from "./pages/contacts";
 import Bar from "./pages/bar";
 import Form from "./pages/form";
-// import Line from "./pages/line";
+import Line from "./pages/line";
 import Pie from "./pages/pie";
 import FAQ from "./pages/faq";
 // import Geography from "./pages/geography";
@@ -34,8 +34,8 @@ const App = () => {
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/bar" element={<Bar />} />
               <Route path="/pie" element={<Pie />} />
-              {/* <Route path="/line" element={<Line />} />
-              <Route path="/geography" element={<Geography />} />*/}
+               <Route path="/line" element={<Line />} />
+              {/* <Route path="/geography" element={<Geography />} /> */}
               <Route path="/faq" element={<FAQ />} />
             </Routes>
           </main>
